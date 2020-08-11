@@ -1,0 +1,171 @@
+/* =============
+General settings
+================ */
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --lighter-blue: hsl(217, 100%, 91%);
+  --light-blue: hsl(217, 100%, 75%);
+  --blue: hsl(217, 100%, 64%);
+  --medium-blue: hsl(217, 55%, 29%);
+  --dark-blue: hsl(217, 56%, 19%);
+  --light-gray: hsl(210, 47%, 93%);
+  --gray: hsl(240, 25%, 2%);
+}
+
+body {
+  background-color: var(--light-gray);
+  line-height: 1.6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.row {
+  display: flex;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ====================
+        Styling
+ ===================  */
+
+.title,
+.subtitle {
+  margin-bottom: 0.5em;
+}
+
+hr {
+  border: 0.3px solid var(--blue);
+  opacity: 20%;
+  margin-bottom: 2em;
+}
+
+.typing-stats {
+  color: var(--medium-blue);
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.typing-stats__col {
+  font-size: 2em;
+}
+
+.text-display {
+  font-size: 1.25em;
+  padding: 0.6em;
+}
+.text-input {
+  padding: 0.5em;
+  resize: none;
+  border-radius: 5px;
+  border: 1px solid var(--light-blue);
+  height: 50px;
+  caret-color: var(--blue);
+  overflow: hidden;
+}
+.text-input:focus,
+.text-input:active {
+  outline: none;
+  border: 3px solid var(--light-blue);
+}
+.text-input,
+.text-display {
+  width: 100%;
+  font-size: 20px;
+}
+
+.keybr-container {
+  background-color: white;
+  color: var(--medium-blue);
+  min-height: 250px;
+  font-size: 1.25em;
+  padding: 1em;
+  border: 1.5px solid var(--lighter-blue);
+  border-radius: 5px;
+}
+.key {
+  border: 0.5px solid var(--light-blue);
+  padding: 0.5em;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+}
+.key + .key {
+  margin-left: 0.3em;
+}
+
+.second-row,
+.third-row,
+.fourth-row,
+.fifth-row {
+  margin-top: 0.3em;
+}
+
+.first-row-spec {
+  width: 85px;
+}
+
+.second-row-spec,
+.fifth-row-spec {
+  width: 70px;
+}
+.first-row,
+.second-row-spec,
+.third-row-spec,
+.fourth-row-spec,
+.fifth-row-spec {
+  font-size: 16px;
+}
+
+.third-row-spec {
+  width: 84px;
+}
+
+.fourth-row-spec {
+  width: 110px;
+}
+
+.spacekey {
+  width: 433px;
+  text-align: center;
+}
+
+.key-on-focus {
+  color: white;
+  background-color: var(--medium-blue);
+  transition: all 0.2s ease-in-out;
+}
+.wrong-input {
+  background-color: #f39696;
+}
+
+.correct-input {
+  background-color: #b0f396;
+}
+.space-symbol {
+  font-size: 1.25em;
+  padding: 0.06em;
+}

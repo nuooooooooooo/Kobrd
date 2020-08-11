@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Kyobrd</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Kyobrd</h1>
+
+      <p class="subtitle">Practice Korean through touch typing</p>
+      <hr />
+
+      <div class="row typing-stats">
+        <p class="typing-stats__col">WPM</p>
+        <p class="timer typing-stats__col" id="timer">00:00</p>
+      </div>
+
+      <p id="textDisplay" class="text-display"></p>
+
+      <textarea id="textInput" class="text-input" autofocus></textarea>
+      <div class="keybr-container">
+        <div class="key-container">
+          <div class="row first-row">
+            <div class="key" id="Backquote">`</div>
+            <div class="key" id="Digit1">1</div>
+            <div class="key" id="Digit2">2</div>
+            <div class="key" id="Digit3">3</div>
+            <div class="key" id="Digit4">4</div>
+            <div class="key" id="Digit5">5</div>
+            <div class="key" id="Digit6">6</div>
+            <div class="key" id="Digit7">7</div>
+            <div class="key" id="Digit8">8</div>
+            <div class="key" id="Digit9">9</div>
+            <div class="key" id="Digit0">0</div>
+            <div class="key" id="Minus">-</div>
+            <div class="key" id="Equal">=</div>
+            <div class="key first-row-spec" id="Backspace">Backsp.</div>
+          </div>
+          <div class="row second-row">
+            <div class="key second-row-spec">Tab</div>
+            <div class="key" id="KeyQ">ㅂ</div>
+            <div class="key" id="KeyW">ㅈ</div>
+            <div class="key" id="KeyE">ㄷ</div>
+            <div class="key" id="KeyR">ㄱ</div>
+            <div class="key" id="KeyT">ㅅ</div>
+            <div class="key" id="KeyY">ㅛ</div>
+            <div class="key" id="KeyU">ㅕ</div>
+            <div class="key" id="KeyI">ㅑ</div>
+            <div class="key" id="KeyO">ㅐ</div>
+            <div class="key" id="KeyP">ㅔ</div>
+            <div class="key" id="BracketLeft">[</div>
+            <div class="key" id="BracketRight">]</div>
+            <div class="key" id="BackSlash">\</div>
+          </div>
+          <div class="row third-row">
+            <div class="third-row-spec key">Caps L.</div>
+            <div class="key" id="KeyA">ㅁ</div>
+            <div class="key" id="KeyS">ㄴ</div>
+            <div class="key" id="KeyD">ㅇ</div>
+            <div class="key" id="KeyF">ㄹ</div>
+            <div class="key" id="KeyG">ㅎ</div>
+            <div class="key" id="KeyH">ㅗ</div>
+            <div class="key" id="KeyJ">ㅓ</div>
+            <div class="key" id="KeyK">ㅏ</div>
+            <div class="key" id="KeyL">ㅣ</div>
+            <div class="key" id="Semicolon">;</div>
+            <div class="key" id="Quote">'</div>
+            <div class="third-row-spec key">Enter</div>
+          </div>
+          <div class="fourth-row row">
+            <div class="fourth-row-spec key">Shift</div>
+            <div class="key" id="KeyZ">ㅋ</div>
+            <div class="key" id="KeyX">ㅌ</div>
+            <div class="key" id="KeyC">ㅊ</div>
+            <div class="key" id="KeyV">ㅍ</div>
+            <div class="key" id="KeyB">ㅠ</div>
+            <div class="key" id="KeyN">ㅜ</div>
+            <div class="key" id="KeyM">ㅡ</div>
+            <div class="key">,</div>
+            <div class="key">.</div>
+            <div class="key">/</div>
+            <div class="fourth-row-spec key">Shift</div>
+          </div>
+          <div class="fifth-row row">
+            <div class="key fifth-row-spec">ctrl</div>
+            <div class="key fifth-row-spec">alt</div>
+            <div class="key spacekey" id="Space">␣</div>
+            <div class="key fifth-row-spec">alt</div>
+            <div class="key fifth-row-spec">ctrl</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <span class="wrong-input">가</span><span class="correct-input">␣나</span>␣다␣라␣마␣바␣사 -->
