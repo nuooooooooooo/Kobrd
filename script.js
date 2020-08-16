@@ -1050,15 +1050,23 @@ textInputElement.addEventListener("input", () => {
   }
 });
 
-const dropdownList = document.getElementById("levelSelector");
-
 // stores selected option in session storage so the dropdown list also works in chrome
-function storeMe(obj) {
-  sessionStorage.setItem("selectedLevel", obj.options[obj.selectedIndex].value);
+
+const dropdownList = document.getElementById("levelSelector");
+let secondLoad = sessionStorage.getItem("Loaded");
+if (secondLoad) {
+  document.getElementById("levelSelector").value = sessionStorage.getItem(
+    "selectedLevel"
+  );
 }
-dropdownList.value = sessionStorage.getItem("selectedLevel");
 
 let key = dropdownList.options[dropdownList.selectedIndex].value;
+function storeMe(obj) {
+  sessionStorage.setItem("selectedLevel", obj.options[obj.selectedIndex].value);
+  secondLoad = true;
+  sessionStorage.setItem("Loaded", secondLoad.value);
+}
+console.log(secondLoad);
 function getKoreanText() {
   if (key > 12) {
     return "More to come soon";
