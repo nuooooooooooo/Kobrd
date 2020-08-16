@@ -1051,8 +1051,14 @@ textInputElement.addEventListener("input", () => {
 });
 
 const dropdownList = document.getElementById("levelSelector");
+
+// stores selected option in session storage so the dropdown list also works in chrome
+function storeMe(obj) {
+  sessionStorage.setItem("selectedLevel", obj.options[obj.selectedIndex].value);
+}
+dropdownList.value = sessionStorage.getItem("selectedLevel");
+
 let key = dropdownList.options[dropdownList.selectedIndex].value;
-console.log(key);
 function getKoreanText() {
   if (key > 12) {
     return "More to come soon";
@@ -1091,5 +1097,14 @@ function logKey(key) {
     focusedKey.classList.remove("key-on-focus");
   }
 }
+
+// TODO: display current level on page
+// TODO: WPM
+// TODO: accuracy
+// TODO: random sentence generator game
+// TODO: scoring system for game
+// TODO: store game score in table and display highest score for set username
+// TODO: different key colors for keys in level
+// TODO: make levels into arrays so there is more training possible
 
 renderKoreanText();

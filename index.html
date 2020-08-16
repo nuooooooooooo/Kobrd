@@ -16,7 +16,11 @@
 
       <div class="row typing-stats">
         <div class="">
-          <select class="select-option" id="levelSelector">
+          <select
+            class="select-option"
+            onchange="storeMe(this)"
+            id="levelSelector"
+          >
             <option value="1">Level 1: ㅁ,ㄹ,ㅓ,ㅏ</option>
             <option value="2">Level 2: ㄴ,ㅣ</option>
             <option value="3">Level 3: ㅇ</option>
