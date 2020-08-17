@@ -133,7 +133,7 @@ hr {
   background-color: white;
   color: var(--medium-blue);
   min-height: 250px;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   padding: 1em;
   border: 1.5px solid var(--lighter-blue);
   border-radius: 5px;
@@ -141,12 +141,23 @@ hr {
 .key {
   border: 0.5px solid var(--light-blue);
   padding: 0.5em;
+  padding-left: 0.7em;
+  text-align: center;
   width: 45px;
   height: 45px;
   border-radius: 5px;
+  position: relative;
 }
 .key + .key {
   margin-left: 0.3em;
+}
+
+.uppercase-key {
+  position: absolute;
+  font-size: 0.8rem;
+  right: 1.9em;
+  bottom: 1.7em;
+  color: rgba(33, 64, 115, 80%);
 }
 
 .second-row,

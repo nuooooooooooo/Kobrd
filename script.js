@@ -1014,6 +1014,15 @@ const korean = {
     "기울이다",
     "길이",
   ],
+  encouragements: [
+    "할 수 있어요!",
+    "힘내자~",
+    "화이팅!!",
+    "잘 해보자~",
+    "열공하자!!",
+    "최고야!",
+    "Amal, ce message est pour toi",
+  ],
 };
 const textDisplayElement = document.getElementById("textDisplay");
 const textInputElement = document.getElementById("textInput");
@@ -1061,12 +1070,18 @@ if (secondLoad) {
 }
 
 let key = dropdownList.options[dropdownList.selectedIndex].value;
+
 function storeMe(obj) {
   sessionStorage.setItem("selectedLevel", obj.options[obj.selectedIndex].value);
   secondLoad = true;
   sessionStorage.setItem("Loaded", secondLoad.value);
 }
-console.log(secondLoad);
+
+let currentLevel = document.getElementById("currentLevel");
+function displayLevel() {
+  currentLevel.innerHTML = `Level ${key - 1}`;
+}
+
 function getKoreanText() {
   if (key > 12) {
     return "More to come soon";
@@ -1080,6 +1095,9 @@ toNewLevel.addEventListener("click", () => location.reload());
 // display text on screen and parse text into array
 function renderKoreanText() {
   textDisplayElement.innerHTML = "";
+  let index = korean.encouragements.length;
+  currentLevel.innerHTML = korean.encouragements[getRandomInt(index)];
+  setTimeout(displayLevel, 1500);
   const text = getKoreanText();
   key++;
   text.split("").forEach((char) => {
@@ -1090,7 +1108,7 @@ function renderKoreanText() {
     characterSpan.innerText = char; //*
     textDisplayElement.appendChild(characterSpan); //* these three work together
   }); // each syllable is a span
-  textInputElement.value = null; // clears value when we get new text
+  textInputElement.value = ""; // clears value when we get new text
 }
 
 // function so the pressed keys change colour
@@ -1104,6 +1122,10 @@ function logKey(key) {
   function RemoveClass() {
     focusedKey.classList.remove("key-on-focus");
   }
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
 }
 
 // TODO: display current level on page
