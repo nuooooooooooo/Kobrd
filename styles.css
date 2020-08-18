@@ -209,16 +209,15 @@ hr {
   width: 433px;
   text-align: center;
 }
-
+.current-lesson-keys {
+  background-color: rgba(33, 64, 115, 20%);
+}
 .key-on-focus {
   color: white;
   background-color: var(--medium-blue);
   transition: all 0.2s ease-in-out;
 }
 
-.current-lesson-keys {
-  background-color: rgba(33, 64, 115, 20%);
-}
 .wrong-input {
   background-color: #f39696;
 }
