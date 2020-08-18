@@ -1,5 +1,4 @@
 const korean = {
-  content: "가 나 다 라 마 바 사",
   1: "머마 마머 머마 러라 러라 러라 럼 람 말 멀 멀럼 람말 랄랄 멈멈 멀말",
   2: "니 니 닌니 니닌 리 리 너 너 나 나 미남 림 나니 밀 님 넘 리넘 라님",
   3: "아 이 어 망 닝 렁 아말 난잉 이랑 알아 멍멍 얼마 일이 인멍 아나 엉",
@@ -317,7 +316,7 @@ const korean = {
     "성격",
     "계속",
     "세기",
-    "세웠어요", // ㅗㄷㄱㄷ
+    "세웠어요",
     "아내",
     "가족",
     "놓다",
@@ -329,33 +328,33 @@ const korean = {
     "도시",
     "작업",
     "분위기",
-    "그러하다",
+    "그러하다고",
     "자기",
     "나이",
     "우선",
     "믿다",
-    "바꾸다",
+    "바꿨지만",
     "낳다",
     "정보",
-    "좋아하다",
-    "그리다",
+    "좋아한다고",
+    "그리면",
     "만큼",
-    "배우다",
+    "배울 때",
     "역할",
     "옆",
     "행동",
     "어",
     "국내",
-    "비하다",
+    "비했는데",
     "기관",
     "입장",
-    "만하다",
+    "만하고",
     "아래",
     "방식",
     "영향",
-    "나서다",
-    "흐르다",
-    "깊다",
+    "나서지만",
+    "흐르면",
+    "깊었던",
     "내",
     "산",
     "하지만",
@@ -363,13 +362,13 @@ const korean = {
     "문",
     "꽃",
     "단계",
-    "올리다",
+    "올렸던",
     "그동안",
     "교사",
     "갑자기",
     "넘다",
     "지니다",
-    "잘하다",
+    "잘하겠습니다",
     "마을",
     "대표",
     "가능성",
@@ -378,41 +377,41 @@ const korean = {
     "목소리",
     "노래",
     "바다",
-    "힘들다",
+    "힘들다면",
     "공부",
-    "움직이다",
+    "움직이는데도",
     "의원",
     "노력",
     "전혀",
     "언니",
     "단체",
     "분",
-    "알려지다",
-    "가능하다",
+    "알려졌던",
+    "가능하긴",
     "능력",
-    "주장하다",
+    "주장하기로",
     "자식",
-    "돌리다",
+    "돌렸다",
     "불",
     "주민",
-    "모으다",
+    "모았지만",
     "자료",
     "존재",
     "학년",
     "신문",
-    "가지다",
-    "이해하다",
+    "가질 수 없어",
+    "이해하세요",
     "제품",
     "분야",
     "선생",
-    "돌아가다",
+    "돌아간다니까",
     "사업",
     "행위",
     "수준",
     "지난해",
     "표현",
     "기분",
-    "젊다",
+    "젊었던",
     "동시",
     "옷",
     "순간",
@@ -420,9 +419,9 @@ const korean = {
     "꿈",
     "할머니",
     "방송",
-    "이야기하다",
+    "이야기하려고",
     "나무",
-    "자다",
+    "자게 되었다",
     "연극",
     "오늘",
     "마찬가지",
@@ -432,7 +431,7 @@ const korean = {
     "시간",
     "집단",
     "현대",
-    "살펴보다",
+    "살펴봤어요",
     "장관",
     "차이",
     "풀다",
@@ -447,64 +446,64 @@ const korean = {
     "끌다",
     "대로",
     "빨리",
-    "시작되다",
+    "시작되었다",
     "둘",
-    "설명하다",
+    "설명하지",
     "우주",
     "마치",
     "생산",
-    "바라다",
-    "강하다",
+    "바라다면",
+    "강하잖아요",
     "경험",
     "음악",
     "최고",
-    "나타내다",
-    "아프다",
+    "나타낼 거야",
+    "아프지",
     "고향",
-    "놀라다",
-    "다양하다",
+    "놀랐어",
+    "다양하니까",
     "울다",
     "농민",
-    "드러나다",
+    "드러나지만",
     "은행",
-    "지내다",
+    "지내고 있어",
     "결혼",
     "동생",
     "소설",
     "오후",
     "질서",
     "담다",
-    "모이다",
+    "모였다",
     "시민",
     "회장",
-    "빠르다",
+    "빠르면",
     "아기",
     "아저씨",
     "옛날",
     "이날",
     "제대로",
-    "던지다",
+    "던지고 있어",
     "공간",
     "이곳",
     "딸",
     "마지막",
-    "벌이다",
+    "벌이지요",
     "병원",
     "자세",
-    "강조하다",
+    "강조하구만",
     "경찰",
     "저녁",
     "그러면",
     "기자",
-    "넓다",
+    "넓으면",
     "시험",
     "잠",
     "주로",
     "훨씬",
     "통일",
-    "들어서다",
+    "들어서지만",
     "건강",
-    "가깝다",
+    "가깝게 돼요",
     "건물",
     "시설",
     "외국",
@@ -513,33 +512,33 @@ const korean = {
     "주변",
     "대신",
     "원인",
-    "팔다",
+    "팔다고 했다",
     "차례",
     "열심히",
-    "일하다",
+    "일하는 중이에요",
     "재산",
     "팀",
     "부모",
     "언어",
-    "요구하다",
-    "올라가다",
+    "요구해요",
+    "올라가세요",
     "첫",
     "감독",
     "그날",
     "사실",
     "자주",
-    "당하다",
+    "당한다고",
     "삼다",
     "기간",
     "담배",
-    "일으키다",
+    "일으켰어요",
     "일단",
     "할아버지",
     "조직",
-    "태어나다",
+    "태어날 거야",
     "공장",
     "벌써",
-    "즐기다",
+    "즐겨웠던",
     "지",
     "환자",
     "변하다",
@@ -548,24 +547,24 @@ const korean = {
     "맞추다",
     "쌀",
     "일반",
-    "재미있다",
-    "가르치다",
+    "재미있겠어요",
+    "가르칠 수 없어요",
     "대화",
-    "막다",
+    "막으면",
     "올해",
     "달리",
-    "버리다",
-    "붙이다",
+    "버린다고 했으니까",
+    "붙이세요",
     "인물",
     "늘",
     "모두",
     "전국",
-    "마치다",
+    "마치지",
     "전",
     "다만",
     "도움",
-    "걸다",
-    "멀다",
+    "걸었다",
+    "멀러요",
     "버스",
     "오늘날",
     "농업",
@@ -575,13 +574,13 @@ const korean = {
     "무대",
     "사진",
     "주장",
-    "표현하다",
-    "인하다",
-    "이상하다",
+    "표현하겠습니다",
+    "인하니까",
+    "이상하지요",
     "제일",
-    "붙다",
+    "붙을 수 없었다",
     "아마",
-    "얘기하다",
+    "얘기하려교 해요",
     "잇다",
     "조금",
     "목적",
@@ -590,81 +589,81 @@ const korean = {
     "주위",
     "대책",
     "그만",
-    "발생하다",
+    "발생했는데",
     "재료",
     "결코",
-    "옮기다",
+    "옮기고 있어요",
     "항상",
-    "잃다",
+    "잃었다는",
     "자유",
     "책임",
-    "바뀌다",
-    "비슷하다",
-    "심하다",
+    "바뀔 수 없잖아",
+    "비슷한다고 생각해요",
+    "심하지요",
     "경쟁",
-    "사랑하다",
+    "사랑하지마세요",
     "여름",
-    "자라다",
+    "자라면",
     "회",
     "구체적",
     "기회",
-    "실시하다",
+    "실시하지 뭐",
     "번째",
     "소비자",
-    "싫다",
+    "싫단 말이에요",
     "규모",
     "기준",
     "반드시",
     "셈",
-    "갖추다",
+    "갖추면",
     "그러니까",
-    "받아들이다",
+    "받아들일 게요",
     "값",
     "현장",
     "건설",
-    "꺼내다",
+    "꺼냈나요",
     "노동자",
     "동네",
     "언제나",
     "완전히",
     "자동차",
-    "전하다",
-    "존재하다",
+    "전하세요",
+    "존재한 것",
     "개월",
     "별로",
     "어린이",
     "정하다",
     "한마디",
-    "유지하다",
+    "유지할 수 없는데요",
     "이데올로기",
-    "공부하다",
+    "공부하자",
     "대중",
-    "늘어나다",
-    "닦다",
+    "늘어났으면",
+    "닦아 주세요",
     "말씀",
-    "괜찮다",
+    "괜찮으니까",
     "눈물",
     "각종",
     "빛",
     "아니",
-    "피하다",
-    "거치다",
-    "나아가다",
+    "피하지요",
+    "거치지요",
+    "나아갈 수록",
     "야",
     "지식",
     "현재",
     "여전히",
     "주인",
-    "발견하다",
+    "발견했어요",
     "선",
     "인류",
     "특징",
     "선수",
     "형식",
-    "마련하다",
-    "발표하다",
+    "마련하는데요",
+    "발표할 거예요",
     "주제",
-    "걸치다",
+    "걸치다", // ㅗㄷㄱㄷ
     "겪다",
     "관점",
     "귀",
@@ -1022,8 +1021,32 @@ const korean = {
     "열공하자!!",
     "최고야!",
     "Amal, ce message est pour toi",
+    "천리길도 한 걸음부터.",
+    "시작이 반이다!",
+    "티끌 모아 태산.",
+    "한 우물을 파라.",
+    "개천에서 용 난다.",
+    "뜻이 있는 곳에 길이 있다.",
+    "배움에는 왕도가 없다!",
+    "오늘 한 시간이 내일 두 시간 보다 가치있다.",
   ],
 };
+
+const levels = [
+  "ㅁ,ㄹ,ㅓ,ㅏ",
+  "ㄴ,ㅣ",
+  "ㅇ",
+  "ㅎ,ㅗ",
+  "ㅂ,ㅃ,ㅔ,ㅖ",
+  "ㅈ,ㅉ,ㅐ,ㅒ",
+  "ㄷ,ㄸ,ㅑ",
+  "ㄱ,ㄲ,ㅕ",
+  "ㅅ,ㅆ,ㅛ",
+  "ㅋ,ㅡ,ㅌ",
+  "ㅊ,ㅜ",
+  "ㅍ,ㅠ",
+];
+
 const textDisplayElement = document.getElementById("textDisplay");
 const textInputElement = document.getElementById("textInput");
 
@@ -1079,7 +1102,62 @@ function storeMe(obj) {
 
 let currentLevel = document.getElementById("currentLevel");
 function displayLevel() {
-  currentLevel.innerHTML = `Level ${key - 1}`;
+  if (key <= 12) {
+    currentLevel.innerHTML = `Level ${key}: ${levels[key - 1]} `;
+  } else {
+    currentLevel.innerHTML = `교보드`;
+  }
+}
+
+let keyCodes = [];
+//let keyOn = false;
+function keyColours() {
+  switch (Number(key)) {
+    case 1:
+      keyCodes = ["KeyA", "KeyF", "KeyJ", "KeyK"];
+      break;
+    case 2:
+      keyCodes = ["KeyS", "KeyL"];
+      break;
+    case 3:
+      keyCodes = ["KeyD"];
+      break;
+    case 4:
+      keyCodes = ["KeyG", "KeyH"];
+      break;
+    case 5:
+      keyCodes = ["KeyQ", "KeyP"];
+      break;
+    case 6:
+      keyCodes = ["KeyW", "KeyO"];
+      break;
+    case 7:
+      keyCodes = ["KeyE", "KeyI"];
+      break;
+    case 8:
+      keyCodes = ["KeyR", "KeyU"];
+      break;
+    case 9:
+      keyCodes = ["KeyT", "KeyY"];
+      break;
+    case 10:
+      keyCodes = ["KeyZ", "KeyM", "KeyX"];
+      break;
+    case 11:
+      keyCodes = ["KeyC", "KeyN"];
+      break;
+    case 12:
+      keyCodes = ["KeyV", "KeyB"];
+      break;
+    default:
+      keyCodes = [];
+  }
+
+  for (let i = 0; i < keyCodes.length; i++) {
+    document
+      .getElementById(`${keyCodes[i]}`)
+      .classList.add("current-lesson-keys");
+  }
 }
 
 function getKoreanText() {
@@ -1092,12 +1170,17 @@ function getKoreanText() {
 // makes it possible for the user to select another level based on the dropdown
 toNewLevel.addEventListener("click", () => location.reload());
 
+let index = korean.encouragements.length;
+let encouragingWords = document.getElementById("encouragements");
 // display text on screen and parse text into array
 function renderKoreanText() {
+  displayLevel();
+  keyColours();
+  encouragingWords.innerHTML = korean.encouragements[getRandomInt(index)];
+  setTimeout(() => {
+    encouragingWords.innerHTML = "";
+  }, 3000);
   textDisplayElement.innerHTML = "";
-  let index = korean.encouragements.length;
-  currentLevel.innerHTML = korean.encouragements[getRandomInt(index)];
-  setTimeout(displayLevel, 1500);
   const text = getKoreanText();
   key++;
   text.split("").forEach((char) => {
@@ -1128,13 +1211,11 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-// TODO: display current level on page
 // TODO: WPM
 // TODO: accuracy
 // TODO: random sentence generator game
 // TODO: scoring system for game
 // TODO: store game score in table and display highest score for set username
-// TODO: different key colors for keys in level
 // TODO: make levels into arrays so there is more training possible
 
 renderKoreanText();

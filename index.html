@@ -15,8 +15,8 @@
       <hr />
 
       <div class="row typing-stats">
-        <div id="currentLevel" class="current-level"></div>
-        <div class="">
+        <div id="currentLevel" class="current-level typing-stats__col"></div>
+        <div class="typing-stats__col">
           <select
             class="select-option"
             onchange="storeMe(this)"
@@ -37,10 +37,10 @@
           </select>
           <button class="select-button" id="toNewLevel">Go</button>
         </div>
-        <p class="typing-stats__col">WPM</p>
+        <p class="typing-stats__col right-col">WPM</p>
         <!-- <p class="timer typing-stats__col" id="timer">00:00</p> -->
       </div>
-
+      <p id="encouragements" class="text-display"></p>
       <p id="textDisplay" class="text-display"></p>
 
       <textarea id="textInput" class="text-input" autofocus></textarea>

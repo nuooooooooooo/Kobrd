@@ -64,13 +64,20 @@ hr {
 }
 
 .typing-stats {
+  margin-top: 1.5em;
   color: var(--medium-blue);
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  min-height: 100px;
 }
 
 .typing-stats__col {
-  font-size: 2em;
+  font-size: 1.5em;
+  width: 40%;
+}
+
+.right-col {
+  width: 20%;
 }
 
 .select-option,
@@ -105,9 +112,16 @@ hr {
 }
 .text-display {
   font-size: 1.25em;
+  min-height: 58px;
+
   padding: 0.6em;
   width: 90%;
 }
+#encouragements {
+  color: var(--blue);
+  font-weight: 600;
+}
+
 .text-input {
   padding: 0.5em;
   resize: none;
@@ -200,6 +214,10 @@ hr {
   color: white;
   background-color: var(--medium-blue);
   transition: all 0.2s ease-in-out;
+}
+
+.current-lesson-keys {
+  background-color: rgba(33, 64, 115, 20%);
 }
 .wrong-input {
   background-color: #f39696;
