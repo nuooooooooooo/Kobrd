@@ -663,14 +663,14 @@ const korean = {
     "마련하는데요",
     "발표할 거예요",
     "주제",
-    "걸치다", // ㅗㄷㄱㄷ
-    "겪다",
+    "걸치려면",
+    "겪었다",
     "관점",
     "귀",
     "기본",
     "미터",
-    "사라지다",
-    "어떠하다",
+    "사라졌잖아",
+    "어떠할까요",
     "감정",
     "기억",
     "놈",
@@ -680,43 +680,43 @@ const korean = {
     "구성",
     "술",
     "실제로",
-    "짧다",
-    "고맙다",
+    "짧게",
+    "고맙구만",
     "그곳",
     "보다",
-    "비롯하다",
+    "비롯하길 바랍니다",
     "과연",
     "들리다",
     "바쁘다",
     "이전",
-    "인정하다",
+    "인정하자",
     "중앙",
-    "나쁘다",
-    "불구하다",
+    "나쁜데",
+    "불구하고",
     "시키다",
     "게임",
     "국제",
     "그룹",
     "인생",
     "전통",
-    "기르다",
+    "기르니까",
     "잔",
-    "조사하다",
-    "커다랗다",
+    "조사하지요",
+    "커다랗네요",
     "시인",
     "외",
     "평가",
-    "내려오다",
+    "내려온다고 했어",
     "위치",
-    "줄이다",
+    "줄이려면",
     "가격",
-    "달라지다",
+    "달라질 거야",
     "비다",
     "삼국",
     "손님",
-    "원하다",
+    "원하려면",
     "통신",
-    "확인하다",
+    "확인하기로",
     "모임",
     "아무",
     "웃음",
@@ -725,27 +725,27 @@ const korean = {
     "물질",
     "아나운서",
     "뉴스",
-    "살아가다",
+    "살아갈까요",
     "펴다",
     "겨울",
     "종교",
     "층",
-    "자연스럽다",
+    "자연스럽습니다",
     "돌다",
     "식사",
     "안다",
-    "잊다",
-    "제시하다",
+    "잊었다",
+    "제시하길 바랍니다",
     "반",
-    "불과하다",
+    "불과하려고",
     "혹은",
-    "엄청나다",
+    "엄청나게",
     "텔레비전",
-    "파악하다",
+    "파악하지마세요",
     "실천",
-    "노력하다",
+    "노력하세요",
     "보호",
-    "씻다",
+    "씻었지",
     "한편",
     "이웃",
     "편지",
@@ -753,28 +753,28 @@ const korean = {
     "까닭",
     "방안",
     "센티미터",
-    "분명하다",
+    "분명하려고 했어요",
     "분석",
     "소녀",
-    "지나가다",
+    "지나갈 거야",
     "상품",
     "설명",
-    "훌륭하다",
+    "훌륭하는데",
     "관계자",
     "새로",
-    "이어지다",
+    "이어지면",
     "티브이",
     "봄",
     "종류",
     "낮다",
     "어깨",
-    "지적하다",
+    "지적하지마",
     "부부",
     "오래",
     "요구",
-    "키우다",
+    "키웠다고 그랬어",
     "눕다",
-    "발달하다",
+    "발달하다", // ㅗㄷㄱㄷ
     "발전하다",
     "여행",
     "죽음",
@@ -1049,8 +1049,19 @@ const levels = [
 
 const textDisplayElement = document.getElementById("textDisplay");
 const textInputElement = document.getElementById("textInput");
+let wpm = document.getElementById("wpm");
+let startTime, endTime, totalTime;
+let started = false;
+let complete = false;
+let now, stringCount, wordCount, currentWpm;
 
 textInputElement.addEventListener("input", () => {
+  if (!started) {
+    startTime = new Date();
+    started = true;
+    complete = false;
+  }
+  now = currentTime();
   const arrayText = textDisplayElement.querySelectorAll("span"); // selects all quote elements in tDE
   const arrayValue = textInputElement.value.split("").map((char) => {
     if (char === " ") {
@@ -1079,6 +1090,25 @@ textInputElement.addEventListener("input", () => {
   });
   if (correct) {
     renderKoreanText();
+  }
+
+  stringCount = (string) => string.split("").filter((e) => e).length;
+  wordCount = stringCount(textInputElement.value); // word count of currently input
+  testLength = stringCount(loadedText);
+
+  if (wordCount === testLength) {
+    endTime = new Date();
+  }
+  currentWpm = Math.floor(wordCount / 2.65 / (now / 60));
+  if (currentWpm !== Infinity && !isNaN(currentWpm)) {
+    wpm.innerHTML = `WPM: ${currentWpm}`;
+  } else {
+    wpm.innerHTML = "WPM: 50";
+  }
+  if (endTime && !complete && correct) {
+    totalTime = (endTime - startTime) / 1000;
+    complete = true;
+    started = false;
   }
 });
 
@@ -1110,7 +1140,6 @@ function displayLevel() {
 }
 
 let keyCodes = [];
-//let keyOn = false;
 function keyColours() {
   switch (Number(key)) {
     case 1:
@@ -1172,16 +1201,19 @@ toNewLevel.addEventListener("click", () => location.reload());
 
 let index = korean.encouragements.length;
 let encouragingWords = document.getElementById("encouragements");
+let loadedText;
 // display text on screen and parse text into array
 function renderKoreanText() {
+  textDisplayElement.innerHTML = "";
   displayLevel();
   keyColours();
   encouragingWords.innerHTML = korean.encouragements[getRandomInt(index)];
   setTimeout(() => {
     encouragingWords.innerHTML = "";
   }, 3000);
-  textDisplayElement.innerHTML = "";
+
   const text = getKoreanText();
+  loadedText = text;
   key++;
   text.split("").forEach((char) => {
     if (char === " ") {
@@ -1211,11 +1243,19 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-// TODO: WPM
+// textInputElement.oninput = () => {
+
+// };
+
+function currentTime() {
+  return Math.floor((new Date() - startTime) / 1000); // time in seconds
+}
+
 // TODO: accuracy
 // TODO: random sentence generator game
 // TODO: scoring system for game
 // TODO: store game score in table and display highest score for set username
 // TODO: make levels into arrays so there is more training possible
+// TODO: progress bar
 
 renderKoreanText();
