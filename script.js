@@ -1049,6 +1049,7 @@ const levels = [
 
 const textDisplayElement = document.getElementById("textDisplay");
 const textInputElement = document.getElementById("textInput");
+const progressBar = document.getElementById("progressBar");
 let wpm = document.getElementById("wpm");
 let startTime, endTime, totalTime;
 let started = false;
@@ -1070,6 +1071,13 @@ textInputElement.addEventListener("input", () => {
     return char;
   });
   let correct = true;
+  stringCount = (string) => string.split("").filter((e) => e).length;
+  wordCount = stringCount(textInputElement.value); // word count of currently input text
+  testLength = stringCount(loadedText);
+
+  //fill progress bar based on progress
+  let completionPercentage = (wordCount / testLength) * 100;
+  progressBar.style.width = `${completionPercentage}%`;
 
   // gives different colours depending on correctness
   arrayText.forEach((characterSpan, index) => {
@@ -1088,13 +1096,10 @@ textInputElement.addEventListener("input", () => {
       correct = false;
     }
   });
+
   if (correct) {
     renderKoreanText();
   }
-
-  stringCount = (string) => string.split("").filter((e) => e).length;
-  wordCount = stringCount(textInputElement.value); // word count of currently input
-  testLength = stringCount(loadedText);
 
   if (wordCount === testLength) {
     endTime = new Date();
@@ -1113,7 +1118,6 @@ textInputElement.addEventListener("input", () => {
 });
 
 // stores selected option in session storage so the dropdown list also works in chrome
-
 const dropdownList = document.getElementById("levelSelector");
 let secondLoad = sessionStorage.getItem("Loaded");
 if (secondLoad) {
@@ -1243,19 +1247,14 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-// textInputElement.oninput = () => {
-
-// };
-
 function currentTime() {
   return Math.floor((new Date() - startTime) / 1000); // time in seconds
 }
 
-// TODO: accuracy
+// TODO: DIFFICULT: accuracy
 // TODO: random sentence generator game
 // TODO: scoring system for game
 // TODO: store game score in table and display highest score for set username
 // TODO: make levels into arrays so there is more training possible
-// TODO: progress bar
 
 renderKoreanText();
