@@ -1114,6 +1114,7 @@ textInputElement.addEventListener("input", () => {
     totalTime = (endTime - startTime) / 1000;
     complete = true;
     started = false;
+    progressBar.style.width = `0%`;
   }
 });
 
@@ -1256,5 +1257,7 @@ function currentTime() {
 // TODO: scoring system for game
 // TODO: store game score in table and display highest score for set username
 // TODO: make levels into arrays so there is more training possible
+// TODO: dark mode
+//  TODO: disable visual aid (keyboard)
 
 renderKoreanText();
