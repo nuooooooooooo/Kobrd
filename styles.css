@@ -18,7 +18,7 @@ html {
 :root {
   --lighter-blue: rgb(209, 227, 255);
   --light-blue: rgb(128, 176, 255);
-  --blue: rgb(71, 142, 255);
+  --blue: hsl(217, 100%, 64%);
   --medium-blue: hsl(217, 55%, 29%);
   --dark-blue: hsl(217, 56%, 19%);
   --light-gray: hsl(210, 47%, 93%);
@@ -162,9 +162,61 @@ hr {
   border-radius: 50px;
 }
 
+.keybr-display {
+  position: relative;
+}
+
+.btn-container {
+  position: absolute;
+  top: 0.5em;
+  left: -4.5em;
+  width: 3em;
+}
+
+.keybr-btn__img {
+  opacity: 0.8;
+  height: 2em;
+  align-self: center;
+}
+
+.keybr-btn {
+  text-transform: uppercase;
+  align-self: center;
+  margin-left: 0.5em;
+  background: #b0f396;
+  color: var(--blue);
+  padding: 0.75em 0.375em;
+  position: relative;
+  font-size: 1.1rem;
+  border: 2px solid var(--blue);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5em;
+}
+
+.switch {
+  background: var(--medium-blue);
+  opacity: 0.9;
+  padding: 0.375em;
+  border-radius: 50%;
+  position: absolute;
+  transition: 200ms ease-in-out;
+  top: 0.5px;
+  left: 0;
+}
+
+.slide .switch {
+  top: 49%;
+}
+
+.inactive-switch {
+  background: transparent;
+}
+
 .keybr-container {
   background-color: white;
   color: var(--medium-blue);
+  transition: 200ms ease-in-out;
   min-height: 250px;
   font-size: 1.25rem;
   padding: 1em;
