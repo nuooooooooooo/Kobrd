@@ -189,6 +189,8 @@ hr {
 }
 
 .keybr-btn {
+  text-transform: uppercase;
+  align-self: center;
   margin-left: 0.5em;
   background: #b0f396;
   color: var(--blue);
@@ -199,19 +201,6 @@ hr {
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5em;
-}
-
-.btn,
-.keybr-btn {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 5em;
-  align-self: center;
-}
-
-.btn {
-  font-size: 0.95rem;
-  padding: 0.35em 1em;
-  margin-bottom: 0.5em;
 }
 
 .switch {
