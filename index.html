@@ -10,8 +10,11 @@
   <body>
     <div class="container">
       <h1 class="title">Kyobrd</h1>
+      <div class="row navigation">
+        <p class="subtitle">Practice Korean through touch typing</p>
+        <!-- <button id="switchMode" class="btn">Mode</button> -->
+      </div>
 
-      <p class="subtitle">Practice Korean through touch typing</p>
       <hr />
 
       <div class="row typing-stats">
@@ -34,6 +37,7 @@
             <option value="10">Level 10: ㅋ,ㅡ,ㅌ</option>
             <option value="11">Level 11: ㅊ,ㅜ</option>
             <option value="12">Level 12: ㅍ,ㅠ</option>
+            <option value="13">Game Mode</option>
           </select>
           <button class="select-button" id="toNewLevel">Go</button>
         </div>
@@ -49,11 +53,14 @@
 
       <div class="keybr-display">
         <div class="btn-container row">
-          <img class="keybr-btn__img" src="./img/keyboard-24px.svg" alt="Keyboard icon">
-            <button class="keybr-btn">
-              <div class="switch"></div>
-            </button>
-          </p>
+          <img
+            class="keybr-btn__img"
+            src="/img/keyboard-24px.svg"
+            alt="Keyboard icon"
+          />
+          <button class="keybr-btn">
+            <div class="switch"></div>
+          </button>
         </div>
 
         <div class="keybr-container">

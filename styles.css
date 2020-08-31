@@ -57,6 +57,14 @@ img {
   margin-bottom: 0.5em;
 }
 
+.navigation {
+  justify-content: space-between;
+}
+
+.navlinks {
+  list-style: none;
+  text-align: right;
+}
 hr {
   border: 0.3px solid var(--blue);
   opacity: 20%;
@@ -162,7 +170,8 @@ hr {
   border-radius: 50px;
 }
 
-.keybr-display {
+.keybr-display,
+.theme-display {
   position: relative;
 }
 
@@ -180,28 +189,39 @@ hr {
 }
 
 .keybr-btn {
-  text-transform: uppercase;
-  align-self: center;
   margin-left: 0.5em;
   background: #b0f396;
   color: var(--blue);
-  padding: 0.75em 0.375em;
+  padding: 0.85em 0.45em;
   position: relative;
   font-size: 1.1rem;
-  border: 2px solid var(--blue);
+  border: 2.5px solid var(--blue);
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5em;
 }
 
+.btn,
+.keybr-btn {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5em;
+  align-self: center;
+}
+
+.btn {
+  font-size: 0.95rem;
+  padding: 0.35em 1em;
+  margin-bottom: 0.5em;
+}
+
 .switch {
   background: var(--medium-blue);
   opacity: 0.9;
-  padding: 0.375em;
+  padding: 0.44em;
   border-radius: 50%;
   position: absolute;
   transition: 200ms ease-in-out;
-  top: 0.5px;
+  top: 0;
   left: 0;
 }
 

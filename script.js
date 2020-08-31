@@ -4,7 +4,7 @@ const korean = {
   3: "아 이 어 망 닝 렁 아말 난잉 이랑 알아 멍멍 얼마 일이 인멍 아나 엉",
   4: "호 호 호 민하 홍님 라힌 외 와 왕호 이호 홈 민호 뇌 뫼 뢰 하하",
   5: "바 빠 베 뻬 베리 바빠 오바 레몬 멘 방 엥엥 뽀뽀 나빠 베베 엡 발레",
-  6: "재 째 자 짜 앱 해 왜 왠지 오랜지 지방 내일 매너 어제 잘래 빨래",
+  6: "재 째 자 짜 앱 해 왜 왠지 째쟂 지방 내일 매너 어제 잘래 빨래",
   7: "댜 땨 야 냐 말하냐 다따 달라 덜리네 제대로 야한 절대야 게다가 이때",
   8: "겨 껴 긴념일 견디다 건물 여자 것 까까 연말 열다 미녀 꼬마 고맙다",
   9: "쇼 쏘 쇼미더머니 가세요 주세요 새롭다 쌤 입었다 열었어요 싼 선물",
@@ -1139,49 +1139,65 @@ let currentLevel = document.getElementById("currentLevel");
 function displayLevel() {
   if (key <= 12) {
     currentLevel.innerHTML = `Level ${key}: ${levels[key - 1]} `;
+  } else if (key == 13) {
+    currentLevel.innerHTML = "Game Mode";
   } else {
     currentLevel.innerHTML = `교보드`;
   }
 }
 
+// make multidimensional array for each ex for case 3 [[KeyD][KeyS,KeyL]]
 let keyCodes = [];
+let keyOff = [];
 function keyColours() {
   switch (Number(key)) {
     case 1:
       keyCodes = ["KeyA", "KeyF", "KeyJ", "KeyK"];
+      keyOff = [];
       break;
     case 2:
       keyCodes = ["KeyS", "KeyL"];
+      keyOff = ["KeyA", "KeyF", "KeyJ", "KeyK"];
       break;
     case 3:
       keyCodes = ["KeyD"];
+      keyOff = ["KeyS", "KeyL"];
       break;
     case 4:
       keyCodes = ["KeyG", "KeyH"];
+      keyOff = ["KeyD"];
       break;
     case 5:
       keyCodes = ["KeyQ", "KeyP"];
+      keyOff = ["KeyG", "KeyH"];
       break;
     case 6:
       keyCodes = ["KeyW", "KeyO"];
+      keyOff = ["KeyQ", "KeyP"];
       break;
     case 7:
       keyCodes = ["KeyE", "KeyI"];
+      keyOff = ["KeyW", "KeyO"];
       break;
     case 8:
       keyCodes = ["KeyR", "KeyU"];
+      keyOff = ["KeyE", "KeyI"];
       break;
     case 9:
       keyCodes = ["KeyT", "KeyY"];
+      keyOff = ["KeyR", "KeyU"];
       break;
     case 10:
       keyCodes = ["KeyZ", "KeyM", "KeyX"];
+      keyOff = ["KeyT", "KeyY"];
       break;
     case 11:
       keyCodes = ["KeyC", "KeyN"];
+      keyOff = ["KeyZ", "KeyM", "KeyX"];
       break;
     case 12:
       keyCodes = ["KeyV", "KeyB"];
+      keyOff = ["KeyC", "KeyN"];
       break;
     default:
       keyCodes = [];
@@ -1192,10 +1208,15 @@ function keyColours() {
       .getElementById(`${keyCodes[i]}`)
       .classList.add("current-lesson-keys");
   }
+  for (let i = 0; i < keyOff.length; i++) {
+    document
+      .getElementById(`${keyOff[i]}`)
+      .classList.remove("current-lesson-keys");
+  }
 }
 
 function getKoreanText() {
-  if (key > 12) {
+  if (key > 13) {
     return "More to come soon";
   }
   return korean[key];
@@ -1267,12 +1288,11 @@ btn.addEventListener("click", function () {
 });
 
 // TODO: DIFFICULT: accuracy
-//  idea to hop off idea above accuracy through backspace usage ?
+//  idea to hop off idea above, accuracy through backspace usage ?
 // TODO: random sentence generator game
 // TODO: scoring system for game based on wpm and accuracy
 // TODO: store game score in table and display highest score for set username
 // TODO: make levels into arrays so there is more training possible
 // TODO: dark mode
-//  TODO: disable visual aid (keyboard)
 
 renderKoreanText();
