@@ -1218,10 +1218,11 @@ function getKoreanText() {
   let text = korean[key];
   let gameText = [];
   if (key > 13) {
-    return "More to come soon";
+    return "You reached the end.";
   } else if (key == 13) {
     while (gameText.length < 10) {
-      gameText.push(text[getRandomInt(1000)]);
+      gameText.push(text[getRandomInt(999)]);
+      console.log(text.length);
     }
     return gameText.join(" ");
   }
