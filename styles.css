@@ -28,10 +28,18 @@ html {
 body {
   background-color: var(--light-gray);
   line-height: 1.6;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-wrap: break-word;
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+.title {
+  display: block;
+  height: inherit;
 }
 
 img {
@@ -43,16 +51,40 @@ img {
   display: flex;
 }
 
+.wrapper {
+  margin: 1.5em auto;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  max-width: 980px;
+}
+
 .container {
-  max-width: 900px;
+  width: 980px;
   margin: 0 auto;
 }
 
 /* ====================
         Styling
  ===================  */
+h1 {
+  font-size: 1.5rem;
+}
 
-.title,
+h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+.logo {
+  height: 4em;
+}
+
 .subtitle {
   margin-bottom: 0.5em;
 }
@@ -68,15 +100,15 @@ img {
 hr {
   border: 0.3px solid var(--blue);
   opacity: 20%;
-  margin-bottom: 2em;
+
+  margin-bottom: 3em;
 }
 
 .typing-stats {
-  margin-top: 1.5em;
   color: var(--medium-blue);
-  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
   justify-content: space-between;
-  min-height: 100px;
 }
 
 .typing-stats__col {
@@ -86,6 +118,7 @@ hr {
 
 .right-col {
   width: 20%;
+  text-align: right;
 }
 
 .select-option,
@@ -120,8 +153,8 @@ hr {
 }
 .text-display {
   font-size: 1.25em;
-  min-height: 58px;
-
+  min-height: 57px;
+  max-width: 750px;
   padding: 0.6em;
   width: 90%;
 }
@@ -138,6 +171,7 @@ hr {
   height: 50px;
   caret-color: var(--blue);
   overflow: hidden;
+  display: block;
 }
 .text-input:focus,
 .text-input:active,
@@ -150,6 +184,8 @@ hr {
 .progress {
   width: 100%;
   font-size: 20px;
+  max-width: 750px;
+  margin: 0 auto;
 }
 
 .progress {
@@ -173,6 +209,9 @@ hr {
 .keybr-display,
 .theme-display {
   position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-top: 0.5em;
 }
 
 .btn-container {
@@ -308,4 +347,10 @@ hr {
 .space-symbol {
   font-size: 1.25em;
   padding: 0.06em;
+}
+
+@media (max-width: 950px) {
+  .container {
+    display: none;
+  }
 }

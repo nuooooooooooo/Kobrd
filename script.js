@@ -11,7 +11,7 @@ const korean = {
   10: "크 트 카레 끝 카운트 의사 트로트 칼 키스 스트리트 텔레비전 킅 틐",
   11: "추 추 반찬 위 청춘 꽃 추천 출구 귀신 우산 무료 스위치 동물 치즈",
   12: "퓨 퓨 컴퓨터 숲 뮤지션 귤 슈퍼 우유 풀다 유행 파스타 유럽 판매 한류",
-  words: [
+  13: [
     "것",
     "하다",
     "있으니까",
@@ -741,7 +741,7 @@ const korean = {
     "혹은",
     "엄청나게",
     "텔레비전",
-    "파악하지마세요",
+    "파악하지",
     "실천",
     "노력하세요",
     "보호",
@@ -1020,7 +1020,6 @@ const korean = {
     "잘 해보자~",
     "열공하자!!",
     "최고야!",
-    "Amal, ce message est pour toi",
     "천리길도 한 걸음부터.",
     "시작이 반이다!",
     "티끌 모아 태산.",
@@ -1216,10 +1215,17 @@ function keyColours() {
 }
 
 function getKoreanText() {
+  let text = korean[key];
+  let gameText = [];
   if (key > 13) {
     return "More to come soon";
+  } else if (key == 13) {
+    while (gameText.length < 10) {
+      gameText.push(text[getRandomInt(1000)]);
+    }
+    return gameText.join(" ");
   }
-  return korean[key];
+  return text;
 }
 
 // makes it possible for the user to select another level based on the dropdown
@@ -1240,7 +1246,10 @@ function renderKoreanText() {
 
   const text = getKoreanText();
   loadedText = text;
-  key++;
+  while (key < 13) {
+    key++;
+  }
+
   text.split("").forEach((char) => {
     if (char === " ") {
       char = "␣";
@@ -1287,7 +1296,7 @@ btn.addEventListener("click", function () {
   }
 });
 
-// TODO: DIFFICULT: accuracy
+// DIFFICULT: accuracy
 //  idea to hop off idea above, accuracy through backspace usage ?
 // TODO: random sentence generator game
 // TODO: scoring system for game based on wpm and accuracy

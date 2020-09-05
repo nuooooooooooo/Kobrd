@@ -4,15 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
     <title>Kyobrd</title>
   </head>
   <body>
+    <div class="wrapper row">
+      <a href="/" class="title"
+        ><img class="logo" src="./img/default.svg" alt="Kobrd"
+      /></a>
+      <div class="nav">
+        <a href="/">About</a>
+        <button>
+          <img src="./img/keyboard-24px.svg" alt="Dark mode switch" />
+        </button>
+      </div>
+    </div>
+
     <div class="container">
-      <h1 class="title">Kyobrd</h1>
       <div class="row navigation">
-        <p class="subtitle">Practice Korean through touch typing</p>
-        <!-- <button id="switchMode" class="btn">Mode</button> -->
+        <h3 class="subtitle">Practice Korean through touch typing</h3>
       </div>
 
       <hr />
@@ -158,5 +172,6 @@
         </div>
       </div>
     </div>
+    <div class="small-screens"></div>
   </body>
 </html>
