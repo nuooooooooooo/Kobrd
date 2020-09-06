@@ -2,15 +2,15 @@ const korean = {
   1: "머마 마머 머마 러라 러라 러라 럼 람 말 멀 멀럼 람말 랄랄 멈멈 멀말",
   2: "니 니 닌니 니닌 리 리 너 너 나 나 미남 림 나니 밀 님 넘 리넘 라님",
   3: "아 이 어 망 닝 렁 아말 난잉 이랑 알아 멍멍 얼마 일이 인멍 아나 엉",
-  4: "호 호 호 민하 홍님 라힌 외 와 왕호 이호 홈 민호 뇌 뫼 뢰 하하",
-  5: "바 빠 베 뻬 베리 바빠 오바 레몬 멘 방 엥엥 뽀뽀 나빠 베베 엡 발레",
-  6: "재 째 자 짜 앱 해 왜 왠지 째쟂 지방 내일 매너 어제 잘래 빨래",
-  7: "댜 땨 야 냐 말하냐 다따 달라 덜리네 제대로 야한 절대야 게다가 이때",
-  8: "겨 껴 긴념일 견디다 건물 여자 것 까까 연말 열다 미녀 꼬마 고맙다",
-  9: "쇼 쏘 쇼미더머니 가세요 주세요 새롭다 쌤 입었다 열었어요 싼 선물",
-  10: "크 트 카레 끝 카운트 의사 트로트 칼 키스 스트리트 텔레비전 킅 틐",
-  11: "추 추 반찬 위 청춘 꽃 추천 출구 귀신 우산 무료 스위치 동물 치즈",
-  12: "퓨 퓨 컴퓨터 숲 뮤지션 귤 슈퍼 우유 풀다 유행 파스타 유럽 판매 한류",
+  4: "호 호 호 오호 나하 미노 민하 홍님 라힌 외 와 왕호 이호 홈 민호 뇌 뫼 뢰 하하 ",
+  5: "바 빠 베 뻬 바뻬 빠베 베비 뽀호 베리 바빠 오바 레몬 멘 방 엥엥 뽀뽀 나빠 베베 엡 발레",
+  6: "재 째 자 짜 째 재 앱 해 왜 왠지 째쟂 지방 내일 매너 어제 잘래 빨래",
+  7: "댜 땨 야 냐 야 야 냐 냐 말하냐 다따 달라 덜리네 제대로 야한 절대야 게다가 이때",
+  8: "겨 껴 겨 껴 고 꼬 긴념일 견디다 건물 여자 것 까까 연말 열다 미녀 꼬마 고맙다",
+  9: "쇼 쏘 쏘 쑈 씨 소 쇼미더머니 가세요 주세요 새롭다 쌤 입었다 열었어요 싼 선물",
+  10: "크 트 트 크 크 트 카레 끝 카운트 의사 트로트 칼 키스 스트리트 텔레비전 킅 틐",
+  11: "추 추 추 추 반찬 위 청춘 꽃 추천 출구 귀신 우산 무료 스위치 동물 치즈",
+  12: "퓨 퓨 퓨 퓨 퓨 퓨 퓨 컴퓨터 숲 뮤지션 귤 슈퍼 우유 풀다 유행 파스타 유럽 판매 한류",
   13: [
     "것",
     "하다",
@@ -1222,8 +1222,8 @@ function getKoreanText() {
   } else if (key == 13) {
     while (gameText.length < 10) {
       gameText.push(text[getRandomInt(999)]);
-      console.log(text.length);
     }
+    gameText.push("");
     return gameText.join(" ");
   }
   return text;
@@ -1297,12 +1297,9 @@ btn.addEventListener("click", function () {
   }
 });
 
+renderKoreanText();
+
 // DIFFICULT: accuracy
 //  idea to hop off idea above, accuracy through backspace usage ?
-// TODO: random sentence generator game
 // TODO: scoring system for game based on wpm and accuracy
 // TODO: store game score in table and display highest score for set username
-// TODO: make levels into arrays so there is more training possible
-// TODO: dark mode
-
-renderKoreanText();
