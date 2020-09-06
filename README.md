@@ -6,5 +6,5 @@ A typing app to practice Korean
 * Progress bar
 * WPM rate
 * Virtual keyboard to act as visual aid
-* In development : Game Mode
-* In development : Dark Mode
+* Game Mode
+* Dark Mode (based on browser preferences)
