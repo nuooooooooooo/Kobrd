@@ -1,4 +1,4 @@
-# Kyobrd
+# Kobrd
 A typing app to practice Korean
 ### Features :
 * 12 Levels to fully learn how to type on a Korean keyboard
