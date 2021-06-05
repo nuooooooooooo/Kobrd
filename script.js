@@ -1121,9 +1121,8 @@ textInputElement.addEventListener("input", () => {
 const dropdownList = document.getElementById("levelSelector");
 let secondLoad = sessionStorage.getItem("Loaded");
 if (secondLoad) {
-  document.getElementById("levelSelector").value = sessionStorage.getItem(
-    "selectedLevel"
-  );
+  document.getElementById("levelSelector").value =
+    sessionStorage.getItem("selectedLevel");
 }
 
 let key = dropdownList.options[dropdownList.selectedIndex].value;
@@ -1138,7 +1137,7 @@ let currentLevel = document.getElementById("currentLevel");
 function displayLevel() {
   if (key <= 12) {
     currentLevel.innerHTML = `Level ${key}: ${levels[key - 1]} `;
-  } else if (key == 13) {
+  } else if (key === 13) {
     currentLevel.innerHTML = "Game Mode";
   } else {
     currentLevel.innerHTML = `교보드`;
@@ -1247,7 +1246,7 @@ function renderKoreanText() {
 
   const text = getKoreanText();
   loadedText = text;
-  while (key < 13) {
+  if (key < 13) {
     key++;
   }
 
@@ -1298,8 +1297,3 @@ btn.addEventListener("click", function () {
 });
 
 renderKoreanText();
-
-// DIFFICULT: accuracy
-//  idea to hop off idea above, accuracy through backspace usage ?
-// TODO: scoring system for game based on wpm and accuracy
-// TODO: store game score in table and display highest score for set username
