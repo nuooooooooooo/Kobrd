@@ -1046,6 +1046,21 @@ const levels = [
   "ㅍ,ㅠ",
 ];
 
+let my_url = './sentences.json'
+
+const fetchFunction = async (url) => {
+	try {
+		let response = await fetch(url);
+		let commits = await response.json();
+		console.log(commits);
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+
+fetchFunction(my_url)
+
 const textDisplayElement = document.getElementById("textDisplay");
 const textInputElement = document.getElementById("textInput");
 const progressBar = document.getElementById("progressBar");
