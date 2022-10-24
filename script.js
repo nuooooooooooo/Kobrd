@@ -1,5 +1,5 @@
-import korean from './data.json' assert { type: 'json' };
-console.log(data);
+import data from './data.json' assert { type: 'json' };
+const korean = data;
 
 // const korean = {
 //   1: "머마 마머 머마 러라 러라 러라 럼 람 말 멀 멀럼 람말 랄랄 멈멈 멀말",
