@@ -1,3 +1,6 @@
+import data from './data.json' assert { type: 'json' };
+console.log(data);
+
 const korean = {
   1: "머마 마머 머마 러라 러라 러라 럼 람 말 멀 멀럼 람말 랄랄 멈멈 멀말",
   2: "니 니 닌니 니닌 리 리 너 너 나 나 미남 림 나니 밀 님 넘 리넘 라님",
@@ -1031,6 +1034,7 @@ const korean = {
   ],
 };
 
+
 const levels = [
   "ㅁ,ㄹ,ㅓ,ㅏ",
   "ㄴ,ㅣ",
@@ -1046,20 +1050,20 @@ const levels = [
   "ㅍ,ㅠ",
 ];
 
-let my_url = './sentences.json'
+// let my_url = '/sentences.json'
 
-const fetchFunction = async (url) => {
-	try {
-		let response = await fetch(url);
-		let commits = await response.json();
-		console.log(commits);
-	} catch (error) {
-		console.log(error);
-	}
-}
+// const fetchFunction = async (url) => {
+//   try {
+//     let response = await fetch(url);
+//     let json_content = await response.json();
+//     console.log("here ", json_content);
+//     console.log(typeof(json_content))
+//   } catch (error) {
+//     //console.log(error);
+//   }
+// };
 
-
-fetchFunction(my_url)
+// fetchFunction(my_url);
 
 const textDisplayElement = document.getElementById("textDisplay");
 const textInputElement = document.getElementById("textInput");
