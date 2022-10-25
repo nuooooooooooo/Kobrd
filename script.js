@@ -1047,7 +1047,7 @@ const levels = [
   "ㅍ,ㅠ",
 ];
 
- let my_url = '/data.json'
+ let my_url = './data.json'
 
 const fetchFunction = async (url) => {
   try {
