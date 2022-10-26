@@ -20,7 +20,7 @@ const fetchData = async (url) => {
     let response = await fetch(url);
     return response.json()
   } catch (error) {
-    //console.log(error);
+    console.log(error);
   }
 };
 
@@ -116,14 +116,11 @@ let currentLevel = document.getElementById("currentLevel");
 function displayLevel() {
   if (key <= 12) {
     currentLevel.innerHTML = `Level ${key}: ${levels[key - 1]} `;
-  } else if (key === 13) {
-    currentLevel.innerHTML = "Game Mode";
   } else {
-    currentLevel.innerHTML = `교보드`;
+    currentLevel.innerHTML = `Game Mode`;
   }
 }
 
-// make multidimensional array for each ex for case 3 [[KeyD][KeyS,KeyL]]
 let keyCodes = [];
 let keyOff = [];
 function keyColours() {
@@ -222,7 +219,6 @@ toNewLevel.addEventListener("click", () => location.reload());
 
 
 let loadedText;
-
 // display text on screen and parse text into array
 async function renderKoreanText() {
   textDisplayElement.innerHTML = "";
@@ -267,6 +263,7 @@ function currentTime() {
   return Math.floor((new Date() - startTime) / 1000); // time in seconds
 }
 
+// toggle button for the keyboard
 const btn = document.querySelector(".keybr-btn");
 const keybrDisplay = document.querySelector(".keybr-container");
 btn.addEventListener("click", function () {
